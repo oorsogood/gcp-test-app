@@ -3,7 +3,7 @@
 substitutions:
   _PROJECT_ID: 'upgradlabs-1695429666985'  # Replace with your actual project ID.
   _IMAGE_NAME: 'gcr.io/${_PROJECT_ID}/my-app'
-  _TAG_NAME: '0.0.5'
+  _TAG_NAME: '0.0.1'
   _REGION: 'us-central1'  # Replace with your preferred region.
   _SERVICE_NAME: 'my-cloud-run-service'  # Replace with your preferred Cloud Run service name.
 
@@ -26,8 +26,6 @@ steps:
   - '--platform=managed'
   - '--region=${_REGION}'
   - '--allow-unauthenticated'  # Optional: Remove this line if you don't want to allow unauthenticated access.
-  # Specify the service account email for this step
-  - '--service-account=your-custom-service-account@your-project-id.iam.gserviceaccount.com'
 
 images:
 - '${_IMAGE_NAME}:${_TAG_NAME}'  # Reference the dynamic image name and tag.
