@@ -1,11 +1,11 @@
 # Define variables for project ID, image name, and tag.
 # Customize these values as needed.
 substitutions:
-  _PROJECT_ID: 'upgradlabs-1695429666985'  # Replace with your actual project ID.
+  _PROJECT_ID: 'project-pic-cloudap'  # Replace with your actual project ID.
   _IMAGE_NAME: 'gcr.io/${_PROJECT_ID}/my-app'
   _TAG_NAME: '0.0.1'
-  _REGION: 'us-central1'  # Replace with your preferred region.
-  _SERVICE_NAME: 'my-cloud-run-service'  # Replace with your preferred Cloud Run service name.
+  _REGION: 'asia-east1'  # Replace with your preferred region.
+  _SERVICE_NAME: 'wilson-test-gcp-cicd-service'  # Replace with your preferred Cloud Run service name.
 
 steps:
 - name: 'gcr.io/cloud-builders/docker'
@@ -25,7 +25,6 @@ steps:
   - '--image=${_IMAGE_NAME}:${_TAG_NAME}'
   - '--platform=managed'
   - '--region=${_REGION}'
-  - '--allow-unauthenticated'  # Optional: Remove this line if you don't want to allow unauthenticated access.
 
 images:
 - '${_IMAGE_NAME}:${_TAG_NAME}'  # Reference the dynamic image name and tag.
