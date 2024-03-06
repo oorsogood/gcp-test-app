@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return """
-        <!DOCTYPE html>
+       <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -20,7 +20,6 @@ def hello():
                     font-family: Arial, sans-serif;
                     margin: 0;
                     padding: 0;
-                    background-color: #f0f0f0;
                 }
                 header {
                     background-color: #333;
@@ -29,7 +28,7 @@ def hello():
                     text-align: center;
                 }
                 nav {
-                    background-color: #444;
+                    background-color: #666;
                     padding: 10px;
                     text-align: center;
                 }
@@ -38,48 +37,43 @@ def hello():
                     text-decoration: none;
                     margin: 0 10px;
                 }
-                nav a:hover {
-                    text-decoration: underline;
-                }
-                .container {
-                    max-width: 800px;
-                    margin: 20px auto;
-                    padding: 0 20px;
-                }
-                .post {
-                    background-color: #fff;
+                main {
                     padding: 20px;
-                    margin-bottom: 20px;
                 }
-                .post h2 {
-                    margin-top: 0;
-                }
-                .post p {
-                    line-height: 1.6;
+                footer {
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    padding: 10px;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
                 }
             </style>
         </head>
         <body>
             <header>
-                <h1>My Personal Blog</h1>
+                <h1>Welcome to My Personal Blog</h1>
             </header>
             <nav>
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
             </nav>
-            <div class="container">
-                <div class="post">
-                    <h2>My First Blog Post</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula metus ut nulla vestibulum, nec aliquet felis eleifend. Nam condimentum metus id ex consequat, nec malesuada nunc ultrices.</p>
-                </div>
-                <div class="post">
-                    <h2>My Second Blog Post</h2>
-                    
-                    <p>Etiam a nisl at risus viverra lacinia. Nulla facilisi. In hac habitasse platea dictumst. Suspendisse potenti. Aenean vitae ligula nunc. In nec ipsum et nulla vestibulum accumsan. Sed vel ipsum ut magna vehicula pretium nec non orci.</p>
-                </div>
-                <!-- Add more posts here -->
-            </div>
+            <main>
+                <h2>Latest Posts</h2>
+                <article>
+                    <h3>Post Title 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus ligula vitae dolor dictum, sed dapibus massa lacinia. Donec eu arcu vel arcu elementum ultrices id a nisl. Duis id nunc sed velit bibendum suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer feugiat tincidunt metus, nec aliquam neque consectetur in. Vivamus pretium erat quis arcu feugiat, sed lobortis sapien consectetur.</p>
+                </article>
+                <article>
+                    <h3>Post Title 2</h3>
+                    <p>Integer nec libero sollicitudin, faucibus orci nec, volutpat urna. Suspendisse quis tortor tellus. Duis convallis elit vel dui consequat, nec auctor dui euismod. Vestibulum vitae tortor a metus laoreet ultricies eu vitae ipsum. Vivamus posuere vestibulum magna, vel ultrices nunc convallis ut. Sed eu nibh justo.</p>
+                </article>
+            </main>
+            <footer>
+                <p>&copy; 2024 My Personal Blog</p>
+            </footer>
         </body>
         </html>
     """
